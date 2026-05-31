@@ -1,8 +1,8 @@
 # formulario-dise-o
 
-Forulario de inicio de sesion y registro
+Formulario de inicio de sesion y registro
 
-Este prouyecto solo esta enfocado en el diseño
+Este proyecto solo esta enfocado en el diseño
 
 Caracteristicas:
 
