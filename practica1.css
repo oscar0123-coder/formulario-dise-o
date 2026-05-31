@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI' , Reboto , Arial, Helvetica, sans-serif;
+}
+
+body{
+/* lo pone en medio */
+    display: flex;
+    /* alinea los elementos */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(24, 95, 156);
+}
+
+.autentizacion-card{
+background-color: aliceblue;
+width: 100%;
+max-width: 400px;
+border-radius: 12px;
+box-shadow: 0, 8px , 24px rgba(0,0,0,0.08);
+overflow: hidden;/* es el limite de la pagina si no se pone se sobre sale */
+}
+
+.tabs{
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.tab-btn{
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #757575;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover{
+color: rgb(68, 0, 255);
+background-color: #fafafa;
+
+}
+
+.form-content{
+display: none;
+padding: 32px;
+animation: fadeIn 0.4s ease;
+
+}
+
+.form-content.active{
+    display: block;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0; transform: translateY(5px); }/* significa opacity de cambiarlo de transparente a visible */
+    to { opacity: 1; transform: translateY(0);}/* opacity cero a uno es para que cambia de transparencia */
+
+    
+}
+
+h2{
+    color: darkblue;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.subtitulo{
+color: #6b7280;
+font-size: 14px;
+margin-bottom: 24px;
+}
+
+.entrada-grupo{
+    margin-bottom: 16px;
+}
+
+.entrada-grupo label{
+    display: block;
+    font-size: 14px;
+    color: darkslateblue;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.entrada-grupo input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    color:#3647e6;
+    transition: border-color 0.3s esase, box-shadow 0.3s ease ;
+}
+
+.entrada-grupo input:focus{/* cuando el focus es cuando esta selecionado se va a pponer un borde de color azul como si fuera seleccinado */
+    outline: none;/* cuando una entrada o foco esta activado se pondra un borde de color azul */
+    border-color: #404181;
+     box-shadow: 0 0 0 1px rgb(24, 13, 189);
+}
+/* opciones extras (recordarme, olvide contraseña */
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.opciones label{
+color: #6b7280;
+display: flex;
+align-items: center;
+gap: 6px;/* establece un espacio de pixeles entre el elemento */
+}
+
+.olvidar-link{
+    color: #1d72c2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.olvidar-link:hover{
+    text-transform: underline;
+}
+
+.submit-btn{/* el boton registrar */
+width: 100%;
+background-color: #0e38ac;
+color: #e0e0e0;
+border: none;
+padding: 14px;
+font-size: 16px;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3 esase;
+}
+/* al momento de seleccionar el boton registrar aparecera como si estuviera selecionado */
+.submit-btn:hover{
+    background-color: #404181;
+}

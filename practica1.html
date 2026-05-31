@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login y Registro </title>
+    <link rel="stylesheet" href="practica1.css">
+</head>
+<body>
+    
+<!--  crea un div mas ancho con 4 pestañas de html , css, java, base de datos digamos como un manual     -->
+<div class="autentizacion-card">
+<div class="tabs">
+<!-- estos dos son los botones de arriba: registrarse y iniciar sesion -->
+<button class="tab-btn active" onclick="switchTab(event, 'login')"> Iniciar sesion </button> 
+<button class="tab-btn" onclick="switchTab(event,'registro')">Registrarse</button>
+</div> <!-- el switch se refiere a cambiar de tabla por medio de onclick-->
+
+<div id="login" class="form-content active">
+
+<h2> Bienvenido de nuevo </h2>
+<p class="subtitulo"> Ingresa tus datos para acceder </p>
+<form onsubmit="event.preventDefault();">
+<div class="entrada-grupo">
+ <!--Para verificar que no se quede en blanco, lo hace for --><label for="login-email">Correo Electronico</label>
+    <input type="email" id="login-email" placeholder="ejemplo@correo.com" required>
+   </div> <!--Type es un campo de formulario le pondra un nombre dentro de la etiqueta -->
+
+   <div class="entrada-grupo">
+<label for="login-password">Contraseña</label>
+   <input type="password" id="login-password" placeholder="#######" required>
+</div>
+
+<div class="opciones">
+<label> <input type="checkbox">Recordarme</label>
+<a herf="#" class="olvidar-link">¿Olvidaste tu contraseña?</a>
+</div>
+<button type="submit" class="submit-btn">Ingresar</button>
+</form>
+</div>
+
+<!--formulario de registro-->
+<div id="registro" class="form-content">
+<h2> Crea una cuenta </h2>
+<p class="subtitulo">Unete a nosotros hoy mismo </p>
+<form onsubmit="event.preventDefault();">
+<div class="entrada-grupo">
+<label for="reg-nombre"> Nombre Completo</label>
+<!--primer input de texto--> <input type="text" id="reg-nombre" placeholder="Juan Perez" required>
+</div>
+<div class="entrada-grupo">
+    <label for="reg-email">Correo Electronico</label>
+  <!--segundo input de tipo email-->   <input type="email" id="reg-email" placeholder="ejemplo@correo.com" required>
+</div>
+<div class="entrada-grupo">
+    <label for="reg-password">Contraseña</label>
+<!--tecer input de contraseña--><input type="password" id="reg-password" placeholder="######" required>
+</div>   
+<button type="submit" class="submit-btn">Crear Cuenta</button>
+
+</form>
+
+</div>
+</div>
+
+<script src="practica1.js"></script>
+
+</body>
+</html>
